@@ -16,7 +16,9 @@ public class StartScript : MonoBehaviour {
 	float rad = 0;
 	float timeTrack = 0;
 	int makeMore = 2;
-	int spawnTime = 5;
+	int spawnTime = 10;
+
+	public List<GameObject> enemiesToPick;
 
 	// Use this for initialization
 	void Start () {
@@ -59,17 +61,16 @@ public class StartScript : MonoBehaviour {
 		timeTrack += Time.deltaTime;
 		if (timeTrack > spawnTime) {
 			for (int i = 0; i < makeMore; i++) {
-				int r = Random.Range (1, 4);
-				GameObject enemyToCopy = GameObject.FindGameObjectWithTag ("e" + r);
+				int r = Random.Range (0, 3);
+				GameObject enemyToCopy = enemiesToPick [r];
+				//GameObject enemyToCopy = GameObject.FindGameObjectWithTag ("e" + r+1);
 				if (enemyToCopy != null) {
 					enemyToCopy.GetComponent<enemyScript> ().makeMoreEnemies ();
 				}
 			}
 			timeTrack = 0f;
-			if (spawnTime < 10) {
-				spawnTime++;
-			}
-			makeMore++;
+			if(makeMore < 6)
+				makeMore++;
 		}
 			
 	}

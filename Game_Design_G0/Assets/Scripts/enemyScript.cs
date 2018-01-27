@@ -13,11 +13,14 @@ public class enemyScript : MonoBehaviour {
 	GameObject lastPlayerHit;
 	GameObject gamePieces;
 
+	float timeOff = 0;
 	int totalSize;
 	int healthInitial;
 	Color originalColor;
 	bool s= false;
 	bool keepFollowing = true;
+	bool startCounting = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -34,8 +37,11 @@ public class enemyScript : MonoBehaviour {
 
 	IEnumerator startFollowingAgain(){
 		yield return new WaitUntil (() => this.GetComponent<Rigidbody2D> ().velocity.magnitude <= 0.15);
-		keepFollowing = true;
+		if(GameObject.Find(this.gameObject.name) != null)
+			keepFollowing = true;
 	}
+
+
 
 
 	void FixedUpdate () {
@@ -45,8 +51,16 @@ public class enemyScript : MonoBehaviour {
 				localPosition = localPosition.normalized; // The normalized direction in LOCAL space
 				//this.GetComponent<Rigidbody2D>().AddForce(new Vector2(localPosition.x, localPosition.y) * Time.deltaTime * speed);
 				this.GetComponent<Rigidbody2D> ().velocity = (new Vector2 (localPosition.x * Time.deltaTime * speed, localPosition.y * Time.deltaTime * speed));
+			}else if (this.GetComponent<Rigidbody2D> ().velocity.magnitude <= 0.15) {
+				keepFollowing = true;
 			}
-
+			else if (startCounting) {
+				timeOff += Time.deltaTime;
+				if (timeOff > 1.75f) {
+					timeOff = 0;
+					keepFollowing = true;
+				}
+			}
 		}
 	}
 
@@ -59,7 +73,7 @@ public class enemyScript : MonoBehaviour {
 	public void makeMoreEnemies(){
 		for (int i = 0; i < 1; i++) {
 			GameObject clone = Instantiate (this.gameObject, gamePieces.transform);
-
+			clone.SetActive (true);
 			clone.transform.position = new Vector2 (Random.Range (-2.0f, 2.0f), Random.Range (-2.0f, 2.0f));
 			clone.GetComponent<enemyScript> ().health = healthInitial;
 			clone.GetComponent<SpriteRenderer> ().color = originalColor;
@@ -70,8 +84,13 @@ public class enemyScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collider){
 		//bounce
 		keepFollowing = false;
-		if(GameObject.Find(this.gameObject.name) != null)
-			StartCoroutine ("startFollowingAgain");
+		if (GameObject.Find (this.gameObject.name) != null) {
+			startCounting = true;
+			timeOff = 0;
+			//StartCoroutine ("startFollowingAgain");
+		}
+
+			
 		if (collider.gameObject.name == playerToAttack.name) {
 			//swapPlayerToAttack ();
 

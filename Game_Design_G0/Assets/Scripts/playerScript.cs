@@ -23,7 +23,7 @@ public class playerScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collider){
 		//bounce
-		this.GetComponent<Rigidbody2D> ().velocity *= -0.6f;
+	//	this.GetComponent<Rigidbody2D> ().velocity *= -0.8f;
 
 
 	}
