@@ -1,0 +1,155 @@
+Initialize engine version: 5.5.0b11 (03364468e96e)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   10.18.15.4248
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.072 seconds
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\mugra_000\Documents\GitHub\GameDesign\Game_Design_G2\colorguesser_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.709472 ms
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.924154 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 417.
+Total: 0.517889 ms (FindLiveObjects: 0.050035 ms CreateObjectMapping: 0.025231 ms MarkObjects: 0.432358 ms  DeleteObjects: 0.009408 ms)
+
+fakes 145 58 218
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 38 118 108
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 58 77 229
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 26 123 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 7 102 88
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+REAL 207 224 150
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+User guess is 145 58 218
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.116605 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 297.
+Total: 0.611973 ms (FindLiveObjects: 0.061154 ms CreateObjectMapping: 0.036778 ms MarkObjects: 0.480683 ms  DeleteObjects: 0.031646 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.606413 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 391.
+Total: 0.486242 ms (FindLiveObjects: 0.068852 ms CreateObjectMapping: 0.048752 ms MarkObjects: 0.360084 ms  DeleteObjects: 0.006842 ms)
+
+fakes 122 93 173
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+REAL 201 192 43
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 112 81 127
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 96 130 206
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+User guess is 201 192 43
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+GUESS CORRECT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+REAL 253 190 112
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 36 87 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 99 35 200
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 1 137 44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+User guess is 99 35 200
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.816391 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 297.
+Total: 0.714182 ms (FindLiveObjects: 0.082109 ms CreateObjectMapping: 0.058588 ms MarkObjects: 0.537133 ms  DeleteObjects: 0.032501 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.617532 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 378.
+Total: 0.458017 ms (FindLiveObjects: 0.063292 ms CreateObjectMapping: 0.035495 ms MarkObjects: 0.351104 ms  DeleteObjects: 0.006414 ms)
+
+fakes 229 254 208
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+REAL 54 38 93
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+fakes 222 216 215
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+User guess is 229 254 208
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.867282 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 297.
+Total: 0.531574 ms (FindLiveObjects: 0.052601 ms CreateObjectMapping: 0.037205 ms MarkObjects: 0.418673 ms  DeleteObjects: 0.021810 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 219c -> priority: 1 
