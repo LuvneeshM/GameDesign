@@ -19,6 +19,7 @@ public class SnakeMan : MonoBehaviour {
 	List<Transform> tail = new List<Transform>();
 
 	bool ate = false;
+	bool flashColor = false;
 	float invokeSpeed = 0.10f;
 
 	//up = 0
@@ -26,6 +27,7 @@ public class SnakeMan : MonoBehaviour {
 	//left = 2
 	//right = 3
 	int curDir = 3;
+	int trackColorSwap = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,20 @@ public class SnakeMan : MonoBehaviour {
 	// Update is called once per Frame
 	void Update() {
 		if (gameOn) {
+
+			//flash color?
+			if (flashColor) {
+				if (tail.Count > 0) {
+					if (trackColorSwap == 0) {
+						tail.Last ().GetComponent<SpriteRenderer> ().color = Color.white;
+					} else {
+						tail.Last ().GetComponent<SpriteRenderer> ().color = Color.red;
+					}
+					trackColorSwap = (trackColorSwap + 1) % 10;
+					print (trackColorSwap);
+				}
+			}
+
 			// Move in a new Direction?
 			if (Input.GetKey (KeyCode.RightArrow) && curDir != 2) {
 				dir = Vector2.right;
@@ -69,6 +85,10 @@ public class SnakeMan : MonoBehaviour {
 				ate = false;
 			} else if (tail.Count > 0) {
 				tail.Last ().position = v; //moving last tail up
+
+				//fix color
+				tail.Last().GetComponent<SpriteRenderer>().color = tail.First().GetComponent<SpriteRenderer>().color;
+				tail.First ().GetComponent<SpriteRenderer> ().color = Color.red;
 
 				tail.Insert (0, tail.Last ());
 				tail.RemoveAt (tail.Count - 1);
@@ -107,6 +127,10 @@ public class SnakeMan : MonoBehaviour {
 		} else {
 			gameSetMatch ();
 		}
+	}
+
+	public void indicateLosingTai(bool val){
+		flashColor = val;
 	}
 
 	public int tailLength(){

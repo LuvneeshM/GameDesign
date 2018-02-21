@@ -15,7 +15,7 @@ public class timeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		originlTime = 30f;
+		originlTime = 10f;
 		timeLeft = originlTime;
 
 		timeText.GetComponent<Text> ().text = "Time Left: " + timeLeft;
@@ -27,6 +27,8 @@ public class timeScript : MonoBehaviour {
 			timeLeft -= Time.deltaTime;
 			if (timeLeft <= 0) {
 				ZeroTime ();
+			} else if (timeLeft <= 5.0f) {
+				snakeManHead.GetComponent<SnakeMan> ().indicateLosingTai (true);
 			}
 			updateText ();
 
@@ -41,6 +43,7 @@ public class timeScript : MonoBehaviour {
 	void ZeroTime(){
 		snakeManHead.GetComponent<SnakeMan> ().loseATail ();
 		resetTime ();
+		snakeManHead.GetComponent<SnakeMan> ().indicateLosingTai (false);
 	}
 
 	//resets the timer to initial time
