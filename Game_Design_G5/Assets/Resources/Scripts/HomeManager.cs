@@ -15,6 +15,11 @@ public class HomeManager : MonoBehaviour {
 	void Start () {
 		canvas = GameObject.Find ("Canvas");
 		levelCanvas = transform.Find ("LevelSelectorCanvas").gameObject;
+		for (int i = 0; i < 25; i++) {
+			var g = Instantiate (blob, this.gameObject.transform);
+			g.transform.position = new Vector2 (Random.Range (-8f, 8f), Random.Range (-4.2f, 1.2f));
+			g.GetComponent<SpriteRenderer> ().color = Random.ColorHSV ();
+		}
 	}
 
 	IEnumerator Pause()
@@ -27,6 +32,7 @@ public class HomeManager : MonoBehaviour {
 PUBLIC Variables
 ************************************************************/
 	public GameObject titleText;
+	public GameObject blob;
 /***********************************************************
 PUBLIC METHODS 
 ************************************************************/

@@ -26,12 +26,15 @@ PRIVATE Variables
 
 	bool watchAdOnce;
 
+	List<GameObject> blobList;
+
 /***********************************************************
 PUBLIC VARIABLES 
 ************************************************************/
 	public int buffer;
 	public GameObject cheater;
 	public GameObject plusOne;
+	public GameObject blob;
 		
 /***********************************************************
 PRIVATE METHODS
@@ -49,6 +52,13 @@ PRIVATE METHODS
 
 		watchAdOnce = false;
 
+		if (SceneManager.GetActiveScene ().name == "gameScene_Fusion") {
+			blobList = new List<GameObject> ();
+			for (int i = 0; i < 40; i++) {
+				var g = Instantiate (blob, canvas.gameObject.transform);
+				blobList.Add (g);
+			}
+		}
 		pickTheAnswerButton ();
 		newAnswerColor ();
 		randomizeBtnColor ();
@@ -168,6 +178,10 @@ PRIVATE METHODS
 	void softReset(){
 		if (SceneManager.GetActiveScene ().name == "gameScene_Fusion") {
 			plusOne.GetComponent<moveToScore> ().softReset ();
+			for (int i = 0; i < blobList.Count; i++) {
+				blobList[i].transform.position = blob.transform.position;
+				blobList [i].GetComponent<SpriteRenderer> ().color = Color.white;
+			}
 		}
 		cam.GetComponent<CameraShake> ().softReset ();
 		userGuessBtn.transform.FindChild ("wrong").gameObject.SetActive (false);
@@ -214,8 +228,15 @@ PRIVATE METHODS
 			yield return new WaitForSeconds(0.75f);
 			userGuessBtn.transform.FindChild ("correct").gameObject.SetActive (true);
 			if (SceneManager.GetActiveScene ().name == "gameScene_Fusion") {
+				this.gameObject.GetComponent<playSound> ().splatSound ();
+				yield return new WaitForSeconds (.750f);
 				plusOne.GetComponent<moveToScore> ().sendScore = true;
 				plusOne.SetActive (true);
+				//Shots
+				for (int i = 0; i < blobList.Count; i++) {
+					blobList[i].transform.position = new Vector2 (Random.Range (-8f, 8f), Random.Range (-4.2f, 3.2f));
+					blobList[i].GetComponent<SpriteRenderer> ().color = new Color (((float)ansRed)/255.0f, ((float)ansGreen)/255.0f, ((float)ansBlue/255.0f));
+				}
 			}
 		}
 		if (result == false) {
@@ -229,6 +250,7 @@ PRIVATE METHODS
 				plusOne.SetActive (false);
 			}
 		}
+
 		yield return new WaitForSeconds(3.0f);
 		if (result == true) {
 			if (SceneManager.GetActiveScene ().name != "gameScene_Fusion") {

@@ -10,6 +10,7 @@ public class playSound : MonoBehaviour {
 	public AudioClip soundLevel;
 	public AudioClip take2;
 	public AudioClip resarting;
+	public AudioClip splat;
 
 	private Button button { get { return GetComponent<Button>(); } }
 	private AudioSource source { get { return GetComponent<AudioSource> (); } }
@@ -33,6 +34,13 @@ public class playSound : MonoBehaviour {
 		var prevPitch = source.pitch;
 		source.pitch = 1.0f;
 		source.PlayOneShot (resarting);
+		source.pitch = prevPitch;
+	}
+
+	public void splatSound(){
+		var prevPitch = source.pitch;
+		source.pitch = 1.0f;
+		source.PlayOneShot (splat);
 		source.pitch = prevPitch;
 	}
 }
